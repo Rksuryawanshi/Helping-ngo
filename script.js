@@ -21,6 +21,45 @@ btnCloseModal.addEventListener("click", closeModal);
 btnCloseModal2.addEventListener("click", closeModal);
 overlay.addEventListener("click", closeModal);
 
+// js for getMyLocation
+const btn = document.getElementById("btn");
+const country_container = document.getElementById("country-container");
+
+function geo() {
+  if ("geolocation" in navigator) {
+    navigator.geolocation.getCurrentPosition(function (position) {
+      const lat = position.coords.latitude;
+      const long = position.coords.longitude;
+      getLocation(lat, long);
+    });
+  }
+}
+
+const getLocation = async (lat, long) => {
+  try {
+    const response = await fetch(
+      `http://api.positionstack.com/v1/reverse?access_key=d72c6b9912f63eb9912d54fefcf89c7d&query=${lat},${long}`
+    );
+
+    const data = await response.json();
+    console.log(data);
+    const country = data.data[0];
+
+  country_container.innerHTML = `
+  <label>${country.label}</label>
+  `;
+    console.log(data);
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+btn.addEventListener("click", geo);
+
+// js for getMyLocation Ends here 
+
+
+
 // read more function
 
 function myFunction(i) {
