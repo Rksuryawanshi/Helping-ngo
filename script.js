@@ -4,6 +4,7 @@ const btnCloseModal = document.querySelector(".close-modal");
 const btnCloseModal2 = document.querySelector("button.close");
 const btnsOpenModal = document.querySelector(".show-modal");
 const signUP = document.querySelector(".btn btn-outline-primary");
+const subt = document.querySelector(".subt");
 
 const openModal = function () {
   modal.classList.remove("hidden");
@@ -20,6 +21,9 @@ btnsOpenModal.addEventListener("click", openModal);
 btnCloseModal.addEventListener("click", closeModal);
 btnCloseModal2.addEventListener("click", closeModal);
 overlay.addEventListener("click", closeModal);
+subt.addEventListener("click", function () {
+  alert("Our team reaching Soon.");
+});
 
 // js for getMyLocation
 const btn = document.getElementById("btn");
