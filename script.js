@@ -24,7 +24,6 @@ overlay.addEventListener("click", closeModal);
 subt.addEventListener("click", function () {
   alert("Our team reaching Soon.");
 });
-
 // js for getMyLocation
 const btn = document.getElementById("btn");
 const country_container = document.getElementById("country-container");
@@ -49,7 +48,7 @@ const getLocation = async (lat, long) => {
     console.log(data);
     const country = data.data[0];
 
-  country_container.innerHTML = `
+    country_container.innerHTML = `
   <label>${country.label}</label>
   `;
     console.log(data);
@@ -60,9 +59,7 @@ const getLocation = async (lat, long) => {
 
 btn.addEventListener("click", geo);
 
-// js for getMyLocation Ends here 
-
-
+// js for getMyLocation Ends here
 
 // read more function
 
