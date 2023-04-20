@@ -42,7 +42,7 @@ We try to ensure that animals receive the proper care and attention they need. T
 ## Support
 
 For support, email badshahkumar1508@gmail.com 
-Thaks for visiting our website. 
+Thanks for visiting our website. 
 
 
 ## 🔗 Links
